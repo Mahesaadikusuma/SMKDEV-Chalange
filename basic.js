@@ -10,13 +10,18 @@ function kondisi() {
   const nanang = data("Nanang", 92, 1.95);
   const kodisi = udin.BMI > nanang.BMI;
 
+  console.log({
+    udin: `${udin.name}, ${udin.massa} KG, ${udin.tinggi} M, ${udin.BMI}`,
+    nanang: `${nanang.name}, ${nanang.massa} KG, ${nanang.tinggi} M, ${nanang.BMI}`,
+  });
+
   console.log(`BMI Udin: ${Math.round(udin.BMI)}`);
   console.log(`BMI Nanang: ${Math.round(nanang.BMI)}`);
 
-  if (kodisi === true) {
-    console.log(`BMI ${udin.name} (${udin.BMI.toFixed(1)}) lebih tinggi dari BMI ${nanang.name} (${nanang.BMI.toFixed(1)})`);
+  if (kodisi) {
+    console.log(`BMI ${udin.name} (${udin.BMI.toFixed(1)} KG) lebih tinggi dari BMI ${nanang.name} (${nanang.BMI.toFixed(1)} KG)`);
   } else {
-    console.log(`BMI ${udin.name} (${udin.BMI.toFixed(1)}) lebih kurang dari BMI ${nanang.name} (${nanang.BMI.toFixed(1)})`);
+    console.log(`BMI ${nanang.name} (${nanang.BMI.toFixed(1)} KG) KG) lebih tinggi dari BMI ${udin.name} (${udin.BMI.toFixed(1)} KG) `);
   }
   console.log("============== DATA 1 END ==============");
 
@@ -31,12 +36,12 @@ function kondisi() {
   if (kodisi2 == true) {
     console.log(`BMI ${udin2.name} (${udin2.BMI.toFixed(1)} KG) lebih tinggi dari BMI ${nanang2.name} (${nanang2.BMI.toFixed(1)} KG)`);
   } else {
-    console.log(`BMI ${udin2.name} (${udin2.BMI.toFixed(1)} KG) lebih kurang dari BMI ${nanang2.name} (${nanang2.BMI.toFixed(1)} KG)`);
+    console.log(`BMI ${nanang2.name} (${nanang2.BMI.toFixed(1)} KG) KG) lebih tinggi dari BMI ${udin2.name} (${udin2.BMI.toFixed(1)} KG) `);
   }
   console.log("============== DATA 2 END ==============");
 
   // ini tes saja
-  console.log(data("creator", 80, 2.0));
+  console.log(data("creator", 80 + " KG", 2.0 + " M"));
 }
 
 kondisi();
